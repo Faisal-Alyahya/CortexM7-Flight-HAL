@@ -19,5 +19,15 @@ If the SPI bus encounters a hardware fault (specifically, an SPI Overrun Error S
 ### 3. Deterministic Execution
 Strictly zero dynamic memory allocation (`malloc/free`) to comply with safety-critical embedded standards (MISRA-C:2012) and prevent heap fragmentation mid-flight.
 
+## System Visualizations
+
+### Technical Stack & Data Flow
+Detailed breakdown of the FMU (Cortex-M7) and Companion Computer interaction:
+![Technical Stack](UAV_Stack_Architecture.png)
+
+### Performance Verification (Live Telemetry)
+Real-time analysis of EKF3 stability and ROS2 transport latency:
+![Live Telemetry](Mission_Live_Telemetry.png)
+
 ## Use Case
 Designed to be integrated directly into a UAV's Flight Management Unit (FMU) stack, connecting the low-level hardware SPI protocol to the high-level ROS2/MAVLink application layers with guaranteed sub-millisecond latency.
